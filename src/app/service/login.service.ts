@@ -32,11 +32,16 @@ export class LoginService {
         const token = bearerToken.replace('Bearer ', '');
         console.log(token);
         localStorage.setItem('token', token);
+       // sessionStorage.setItem('token', token);
         return body;
-
       }));
   }
   getToken(){
     return localStorage.getItem('token');
+   // return sessionStorage.getItem('token');
+  }
+  closeSession(){
+    localStorage.clear();
+    //sessionStorage.clear();
   }
 }

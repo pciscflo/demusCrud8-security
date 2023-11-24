@@ -1,10 +1,11 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="warn">
   <mat-toolbar-row>
     <mat-grid-list cols="2" >
     <span>Pablo Aguirre</span>
     <span class="material-icons">update</span>
     </mat-grid-list>
     <span class="example-spacer"></span>
+    <button mat-raised-button (click)="close()">Logout</button>
     <button mat-raised-button [routerLink]="'authors/listar'">Autores</button>
     <button mat-raised-button [routerLink]="'authors/nuevo'">Nuevo</button>
     <button mat-raised-button [routerLink]="'books'">Books</button>
