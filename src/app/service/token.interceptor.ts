@@ -24,7 +24,7 @@ export class TokenInterceptor implements HttpInterceptor {
       })
       return next.handle(cloned).pipe(
         catchError((error: HttpErrorResponse) => {
-          if (error.status === HttpStatusCode.Forbidden || error.status === HttpStatusCode.) {
+          if (error.status === HttpStatusCode.Forbidden) {
             //this.loginService.logout();
             alert("NO TIENES PERMISOS!")
             return EMPTY;
